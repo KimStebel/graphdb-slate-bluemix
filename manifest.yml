@@ -1,0 +1,8 @@
+applications:
+- disk_quota: 1024M
+  host: graph-data-store-docs
+  name: graph-data-store-docs
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 256M

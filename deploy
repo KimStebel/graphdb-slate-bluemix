@@ -1,0 +1,10 @@
+git clone git@github.com:cloudant-labs/graphdb-slate.git temp
+cd temp
+bundle exec middleman build
+cd ..
+rm -rf public
+mkdir public
+cp -r temp/build/* public/
+rm -rf temp
+cf push graph-data-store-docs -d ng.bluemix.net
+
