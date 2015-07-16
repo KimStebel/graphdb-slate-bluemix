@@ -1,25 +1,17 @@
-# Node.js Starter Application
+# Bluemix deployment for graphdb-slate
 
-Bluemix provides a Node.js starter application as a template so that you can
-add your code and push the changes back to the Bluemix environment.
+To deploy to bluemix, just run the deploy script.
 
-## Files
+```
+./deploy
+```
 
-The Node.js starter application has files as below:
+Yep, that's all. Okay, maybe not. If you haven't yet, you need to connect to bluemix and log in before you run the deploy script:
 
-* app.js
+```
+cf api https://api.ng.bluemix.net
+cf login -u $bluemix_username -o graphdborg -s docs
+```
 
-	This file contains the server side JavaScript code for your application
-	written using the express server package.
+You also need to be in the graphdborg org and have developer access to the docs space.
 
-* public/
-
-	This directory contains public resources of the application, that will be
-	served up by this server
-
-* package.json
-
-	This file contains metadata about your application, that is used by both
-	the `npm` program to install packages, but also Bluemix when it's
-	staging your application.  For more information, see:
-	<https://docs.npmjs.com/files/package.json>
